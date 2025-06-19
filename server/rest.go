@@ -68,7 +68,7 @@ func statsHandler(w http.ResponseWriter, req *http.Request) {
     }
 
     w.Header().Set("Content-Type", "application/json; charset=utf8")
-    w.Write([]byte(fmt.Sprintf(`"{totalClients": %d`, len(clientResourceMap))))
+    w.Write([]byte(fmt.Sprintf(`{"totalClients": %d`, len(clientResourceMap))))
     var totalLocks int64
     var totalUnlocks int64
     var totalIdleClients int64
